@@ -1,0 +1,22 @@
+
+
+{% extends 'base.html' %}
+
+{% block head %}
+<title>
+GamerMate
+</title>
+{% endblock %}
+
+{% block body %}
+<div class = "content">
+<h>Begin the Adventure</h>
+<form action="/" method="POST">
+    <p>Username:</p>
+    <p><input type = "text" name = "name" /></p>
+    <p><input type="submit" value="Press to Start" /></p>
+   
+
+</form>
+</div>
+{% endblock %}

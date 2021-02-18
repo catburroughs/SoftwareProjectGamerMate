@@ -3,9 +3,9 @@ import pickle
 import hero
 
 class Game:
-  def __init__(self, name):
+  def __init__(self):
     self.story = {}
-    self.hero1 = hero.Hero(name)
+    self.hero1 = hero.Hero("jim")
 
 
     
@@ -33,8 +33,7 @@ class Game:
 
   def display_page_text(self, lines: list):
     for line in lines:
-      print(line)
-      #self.slow_type(line)
+      self.slow_type(line)
       # Make the user press enter to see the next line
       #get_input([""])
 
@@ -77,14 +76,13 @@ class Game:
     
     
     
-def run():
-  newgame = Game("Cat")
-  newgame.story = {}
-  with open('chapter1.ch', 'rb') as chapter:
-    story = pickle.load(chapter)
+# def run():
+#   newGame = Game()
+#   hero1 = hero.Hero('jim')
+#   newGame.story = {}
+#   with open('chapter1.ch', 'rb') as chapter:
+#     story = pickle.load(chapter)
 
-  newgame.story_flow(story)
-
-if __name__ == '__main__':
-  run()
-
+#   newGame.story_flow(story)
+#   hero1.get_dict()
+#   hero1.final_score()

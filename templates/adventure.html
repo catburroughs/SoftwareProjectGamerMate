@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>
+GamerMate
+</title>
+{% endblock %}
+
+{% block body %}
+<form action="/adventure" method="POST">
+
+<div class = "story">
+<h> Next: {{ story_line }} </h>
+</div>
+
+<div class = "options">
+<h> {{ options }} </h>
+</div>
+
+<div class = "user_action">
+<h>What will you choose, {{name}}</h>
+
+    <br/>
+    <input name = "choice" input type="submit" value="0">
+    <input name = "choice" input type="submit" value="1">
+</form>
+</div>
+{% endblock %}
