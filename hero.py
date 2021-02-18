@@ -2,8 +2,7 @@ import pickle
 
 class Hero:
   
-  def __init__(self, name):
-    self.name = name
+  def __init__(self):
     self.attributes = {'risky':0, 'safe':0, 'indie':0, 'group':0 }
     
 
@@ -19,9 +18,14 @@ class Hero:
     print(self.attributes)
 
   def final_score(self):
-    self.final_values = sorted(self.attributes, key = self.attributes.get, reverse = True)
-    for x in self.final_values:
-      print(x, self.attributes[x])
+    final_values = sorted(self.attributes, key = self.attributes.get, reverse = True)
+    s = ""
+    for x in final_values:
+      s += x + ": " + str(self.attributes[x]) + "<br>"
+
+    return s
+
+
 
     
 

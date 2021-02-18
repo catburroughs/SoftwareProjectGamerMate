@@ -14,7 +14,7 @@ story = {
           ("You take the road into the mountains", 2, "indie", None)
         ]
     },
-    2: {    
+    2: {
         'Text': [
             "Wait a second! You better put some clothes on! ",
             "You have two packs, one containing garments of rich materials, finely worked - clothing fit for royalty and the other pack contains plain, sturdy, servicable garb. "

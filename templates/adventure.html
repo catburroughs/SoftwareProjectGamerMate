@@ -7,22 +7,25 @@ GamerMate
 {% endblock %}
 
 {% block body %}
-<form action="/adventure" method="POST">
+<form action="/adventure/{{ prev_page }}" method="POST">
 
 <div class = "story">
-<h> Next: {{ story_line }} </h>
-</div>
-
-<div class = "options">
-<h> {{ options }} </h>
+<h> Next: </h>
+    {% for line in story_line %}
+    <p>{{ line }}</p>
+    {% endfor %}
 </div>
 
 <div class = "user_action">
-<h>What will you choose, {{name}}</h>
-
-    <br/>
-    <input name = "choice" input type="submit" value="0">
-    <input name = "choice" input type="submit" value="1">
-</form>
+{% if options|length > 0 %}
+<h>What will you choose, {{name}}</h><br/>
+    {% for i in range(options|length) %}
+        <button name = "choice" type="submit" value="{{ i }}">{{ options[i][0] }}</button>
+    {% endfor %}
+{%  else %}
+    <a href="{{ url_for('showresult') }}">Show result</a>"
+{% endif %}
 </div>
+</form>
+
 {% endblock %}
